@@ -1,0 +1,2166 @@
+.menu-btn, .menu
+   display: none
+button 
+   transition: 0.5s
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after
+   display: none
+.custom-checkbox 
+   position: absolute
+   z-index: -1
+   opacity: 0
+.custom-checkbox+label 
+   display: flex
+   align-items: flex-start
+   user-select: none
+   cursor: pointer
+   font-size: 24px
+   line-height: 33px
+   color: #FFFFFF
+.custom-checkbox+label::before
+   content: ''
+   display: inline-block
+   flex-shrink: 0
+   display: flex
+   flex-grow: 0
+   background-repeat: no-repeat
+   background-position: center center
+   background: $vio
+   margin-right: 20px
+   flex: 1 0 auto
+   width: 30px
+   height: 30px
+   border: 1px solid white
+   transition: 0.2s
+   max-width: 30px
+   max-height: 30px
+   border-radius: 50%
+.custom-checkbox:checked+label::before 
+   background: url(/img/check.svg) no-repeat center center
+   background-color: $vio
+.menu-btn2 
+   width: 113px
+   height: 113px
+   position: fixed
+   right: 2%
+   top: 71%
+   z-index: 10
+   background: url(/img/mess.png) no-repeat
+   cursor: pointer
+   opacity: 0.7
+.menu2 
+   position: fixed
+   right: -100%
+   top: 6px
+   width: auto
+   height: auto
+   transform: translateX(500%)
+   transition: transform 0.5s
+   z-index: 10
+   overflow: hidden
+.menu2.active
+   right: 13%
+   top: 66%
+   transform: translateX(0)
+.menu-btn2.active 
+   overflow: visible
+   position: fixed
+   background: url(/img/close2.svg) no-repeat
+   right: 8.8%
+   top: 69%
+   width: 52px
+   height: 52px
+   opacity: 1
+#event-change
+   padding: 20px 0
+   position: absolute
+   color: transparent
+   z-index: -1
+   opacity: 0
+.style1
+   position: relative
+   z-index: 6
+/* SELECT */
+.selectCF
+   margin: 0
+   padding: 0
+   display: inline-block
+   position: relative
+   color: black
+   display: flex
+   align-items: center
+   justify-content: center
+   transition: 0.5s
+   width: 191px
+   height: 54px
+   background: #FFFFFF
+   border: 1px solid rgba(17, 36, 62, 0.2)
+.selectCF li
+   list-style:none
+   cursor: pointer
+   perspective: 900px
+   -webkit-perspective: 900px
+   text-align: left
+   width: 100%
+   height: 100%
+   max-height: 100%
+   box-sizing: border-box
+.selectCF > li
+   position: relative
+   font-size: 0
+   border: 1px solid rgba(250, 250, 255, 0.24);
+.selectCF span
+   display: flex
+   height: auto
+   line-height: 100%
+   color: #888888
+   z-index: 1
+   align-items: center
+.selectCF .arrowCF
+   transition: .3s
+   -webkit-transition: .3s
+   width: 20px
+   height: 15px
+   text-align: center
+   vertical-align: top
+   background: url(/img/down.svg) no-repeat !important
+   position: absolute
+   right: 20px
+   top: 20px
+.selectCF .titleCF
+   text-overflow: ellipsis
+   color: white !important
+   white-space: nowrap
+   width: max-content !important
+   height: max-content !important
+   padding-left: 20px
+   box-sizing: border-box
+   margin-top: 15px
+   background: transparent !important
+   font-weight: 400
+   font-size: 16px
+   line-height: 22px
+   color: #11243E !important
+.selectCF .searchCF
+   position: absolute
+   top: 3px
+   right: 0
+   z-index: -1
+@keyframes searchActive 
+   from
+      transform: rotateY(180deg) 
+   to
+      transform: rotateY(0deg)
+@-moz-keyframes searchActive 
+   from
+      transform: rotateY(180deg) 
+   to
+      transform: rotateY(0deg)
+@-webkit-keyframes searchActive 
+   from
+      -webkit-transform: rotateY(180deg) 
+   to
+      -webkit-transform: rotateY(0deg)
+.searchActive .searchCF
+   z-index: 1
+   animation: searchActive 0.3s alternate 1
+   -moz-animation: searchActive 0.3s alternate 1
+   -webkit-animation: searchActive 0.3s alternate 1
+.searchActive .titleCF
+   opacity: 0
+.selectCF .searchCF input
+   border: none !important
+   padding: 0
+   margin: 0
+   width: auto
+   height: auto
+   background: transparent
+.selectCF .searchCF input:active, .selectCF .searchCF input:focus
+   box-shadow: none !important
+   border: none !important
+   outline: none !important
+.selectCF li ul
+   display: none
+   position: absolute
+   top: 100%
+   left: 1px
+   width: 100%
+   background: white
+   max-height: 255px
+   overflow-y: auto
+   transition: .2s
+   -webkit-transition: .2s
+   z-index: 2
+   box-sizing: border-box
+   padding-bottom: 10px
+   border: 1px solid rgba(17, 36, 62, 0.2)
+.selectCF li ul li
+   padding: 9px 0 9px 20px
+   transition: .2s
+   -webkit-transition: .2s
+   overflow: hidden
+   text-overflow: ellipsis
+   white-space: nowrap
+   border-top: none
+   box-sizing: border-box
+   height: 34px
+   font-weight: 400
+   font-size: 16px
+   line-height: 22px
+   color: #11243E
+   &:last-child
+      border-radius: 0px 0px 5px 5px
+      padding-bottom: 10px
+   &:hover 
+      color: $vio
+.onCF .arrowCF
+   transform: rotate(180deg)
+   -webkit-transform: rotate(180deg)
+@-moz-keyframes effect1 
+   from
+      transform: translateY(15px)
+      opacity: 0
+   to
+      transform: translateY(0px)
+      opacity: s1
+@-webkit-keyframes effect1 
+   from
+      -webkit-transform: translateY(15px) 
+      opacity: 0
+   to
+      -webkit-transform: translateY(0px)
+      opacity: 1
+.onCF li ul
+   display: block
+   position: absolute
+   -moz-animation: effect1 0.3s alternate 1
+   -webkit-animation: effect1 0.3s alternate 1
+   left: -0.55px
+   top: 61px
+   border-radius: 0 0 4px 4px
+   width: 100.6%
+input[type=checkbox]
+   display: none;
+input[type=checkbox] + label:before
+   content: "\2713"
+   color: transparent
+   display: inline-block
+   font-size: 20px
+   line-height: 19px
+   margin: 0px 10px 0 0
+   text-align: center
+   vertical-align: middle
+   transition: color ease .3s
+   width: 22px
+   height: 22px
+   background: #FFFFFF
+   border: 1px solid $vio
+   border-radius: 100px
+   flex: 1 0 auto
+   max-width: 22px
+   box-sizing: border-box
+input[type=checkbox]:checked + label:before 
+   background: $vio
+   box-shadow: inset 0 0 0 4.5px #fff
+input[type="number"] 
+   width: 40px
+   padding: 4px 5px
+   border: 1px solid #bbb
+   border-radius: 3px
+input[type="number"]:focus 
+   box-shadow: 0 0 3px 1px #4b81dd
+   outline: none
+input[type="range"] 
+   -webkit-appearance: none
+   position: relative
+   z-index: 3
+   width: 100%
+   height: 5px
+   background: #cfd3d8
+   border: none !important
+   background-image: linear-gradient($vio, $vio)
+   background-size: 0% 100%
+   background-repeat: no-repeat
+   top: -15px
+input[type="range"]::-webkit-slider-thumb 
+   -webkit-appearance: none
+   height: 16px
+   width: 16px
+   border-radius: 50%
+   background: url(/img/range.svg) no-repeat
+   cursor: ew-resize
+   box-shadow: 0 0 2px 0 #555
+   transition: background .3s ease-in-out
+input[type="range"]::-moz-range-thumb 
+   -webkit-appearance: none
+   height: 16px
+   width: 16px
+   border-radius: 50%
+   background: url(/img/range.svg) no-repeat
+   cursor: ew-resize
+   box-shadow: 0 0 2px 0 #555
+   transition: background .3s ease-in-out
+input[type="range"]::-ms-thumb 
+   -webkit-appearance: none
+   height: 20px
+   width: 20px
+   border-radius: 50%
+   background: #ff4500
+   cursor: ew-resize
+   box-shadow: 0 0 2px 0 #555
+   transition: background .3s ease-in-out
+input[type=range]::-webkit-slider-runnable-track  
+   -webkit-appearance: none
+   box-shadow: none
+   border: none
+   background: transparent
+input[type=range]::-moz-range-track 
+   -webkit-appearance: none
+   box-shadow: none
+   border: none
+   background: transparent
+input[type="range"]::-ms-track 
+   -webkit-appearance: none
+   box-shadow: none
+   border: none
+   background: transparent
+.bread 
+   flex-wrap: wrap 
+   margin-top: -90px
+   a 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: max-content
+      font-size: 15px
+      line-height: 150%
+      color: #292929
+      position: relative
+      font-family: 'Poppins', sans-serif
+      &:after 
+         display: inline-flex
+         content: "—"
+         margin: 0 5px 
+         font-size: 15px
+         color: #292929
+      &:last-child
+         margin-right: 0
+         color: #8C3AF4
+         &:after 
+            display: none
+      &:hover 
+         color: $vio
+.youtube-link .svg, .youtube-link path 
+   transition: 0.5s
+.grtvideo-popup
+   position: fixed
+   top: 0px
+   left: 0
+   right: 0
+   bottom: 0
+   background: rgba(0, 0, 0, 0.85)
+   z-index: 99999
+   padding-top: 100px
+.grtvideo-popup-content
+   margin-top: 50px
+   width: 95%
+   max-width: 850px
+   margin-left: auto
+   margin-right: auto
+   -webkit-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.4)
+   -moz-box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.4)
+   box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.4)
+   position: relative
+.grtvideo-popup-close 
+   position: absolute
+   top: -35px
+   right: 0
+   color: #FFF
+   font-size: 25px
+   cursor: pointer
+   transition: 0.5s
+   &:hover 
+      transform: rotate(90deg)
+.grtyoutube-iframe 
+   width: 100%
+   height: 480px
+.mob 
+   display: none
+.nav 
+   position: relative
+   &:after 
+      content: ""
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12)
+      width: 100%
+      height: 2px
+      position: absolute
+      bottom: 67px
+      left: 0
+      z-index: -1
+   &__box 
+      align-items: center
+      justify-content: space-between
+      padding: 13px 0 14px
+   &__logo 
+      display: block
+      position: relative
+      top: -13px
+      img 
+         width: 100%
+         height: 100%
+         object-fit: cover
+   &__list 
+      flex-wrap: wrap 
+      position: relative
+      top: -33px
+      li 
+         margin-right: 50px
+         position: relative
+         &:last-child
+            margin-right: 0
+         a 
+            color: #555
+            font-size: 15px
+            font-style: normal
+            font-weight: 400
+            line-height: 30px
+            letter-spacing: 0.52px
+            text-transform: uppercase
+            font-family: 'Poppins', sans-serif
+         &.active 
+            a 
+               color: #222
+               font-weight: 600
+               &:after 
+                  content: ""
+                  display: block
+                  width: 105%
+                  position: absolute
+                  bottom: -24px
+                  left: -1px
+                  background: $vio
+                  height: 2px
+         &:hover 
+            a 
+               color: $vio
+   &__info 
+      position: relative
+      top: -33px
+      align-items: center
+   &__link 
+      width: 48px
+      height: 48px
+      border: 1px solid rgba(0, 0, 0, 0.2)
+      border-radius: 50% 
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 20px
+      &:last-child
+         margin-right: 0
+      .svg 
+         path 
+            fill: #222222
+      &:hover 
+         background: #222
+         .svg 
+            path 
+               fill: white
+   &__tel 
+      margin-right: 40px
+      color: #242424
+      font-size: 18px
+      font-style: normal
+      font-weight: 700
+      line-height: 30px
+      font-family: 'Poppins', sans-serif
+      letter-spacing: 1px
+.header 
+   padding-bottom: 873px
+   position: relative
+   &__row2 
+      align-items: center
+      position: relative
+      left: -171px
+      top: -32px
+      margin-bottom: 112px
+      p 
+         font-size: 18px
+         font-style: normal
+         font-weight: 700
+         line-height: 24px
+         text-transform: uppercase
+         margin-right: 20px
+         margin-left: 44px
+   &__box 
+      position: relative
+   .pa2 
+      position: relative
+      left: 51px
+   .pas 
+      display: flex
+      justify-content: flex-end
+      width: 100%
+   h1 
+      margin-top: -91px
+      width: 100%
+   &__button 
+      position: absolute
+      right: 0
+      top: 8px
+   &__sub 
+      color: #222
+      font-size: 40px
+      font-style: normal
+      font-weight: 900
+      line-height: 43px
+      letter-spacing: 1px
+      text-transform: uppercase
+      margin-bottom: 93px
+   &__row 
+      justify-content: space-between
+   &__item 
+      width: 24%
+      height: 174px
+      border-radius: 20px
+      border: 2px solid #D9D9D9
+      background: #FFF
+      padding: 20px 25px 31px
+      overflow: hidden
+      transition: 0.5s 
+      &:hover 
+         height: auto
+         background: $vio
+         border: 2px solid $vio
+         .header__btn 
+            opacity: 1
+         .header__name 
+            color: white
+         .header__icon 
+            path 
+               fill: white
+   &__btn 
+      width: 100%
+      opacity: 0
+      &:hover 
+         border: 1px solid white
+   &__name 
+      color: #222
+      font-family: 'Poppins', sans-serif
+      font-size: 40px
+      font-style: normal
+      font-weight: 800
+      line-height: 70px
+      letter-spacing: 0.8px
+      margin-bottom: 20px
+   &__icon 
+      margin-bottom: 32px
+      path 
+         fill: $vio
+   &__text 
+      color: #FFF
+      font-size: 18px
+      font-style: normal
+      font-weight: 600
+      line-height: 23px
+      margin-bottom: 20px
+      transition: 0.5s 
+   &__map 
+      position: absolute
+      top: 693px
+      left: 50%
+      z-index: -1
+      margin: 0 auto
+      margin-left: -684px
+   .dot 
+      position: absolute
+      top: 300px
+      left: 250px
+      display: none
+      &_1 
+         top: 284px
+         left: 306px
+      &_2 
+         top: 388px
+         left: 193px
+      &_3 
+         top: 413px
+         left: 281px
+      &_4 
+         top: 265px
+         left: 878px
+      &_5
+         top: 284px
+         left: 406px
+      &_6 
+         top: 388px
+         left: 293px
+      &_7 
+         top: 413px
+         left: 381px
+      &_8 
+         top: 265px
+         left: 578px
+      &_9
+         top: 384px
+         left: 406px
+      &_10 
+         top: 288px
+         left: 293px
+      &_11 
+         top: 313px
+         left: 381px
+      &_12 
+         top: 165px
+         left: 578px
+      &_13
+         top: 284px
+         left: 306px
+      &_14
+         top: 388px
+         left: 193px
+      &_15
+         top: 413px
+         left: 281px
+      &_16
+         top: 265px
+         left: 878px
+.van 
+   padding: 14px 0 80px
+   h2 
+      color: white
+      position: relative
+      top: -118px
+   .container
+      max-width: 1770px
+   &__box 
+      background: #222222
+      padding: 100px 84px 80px
+      border-radius: 20px
+   &__row
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__item 
+      border-radius: 20px
+      background: #EDEDED
+      height: 290px
+      width: 32.507%
+      position: relative
+      padding: 40px
+      margin-bottom: 20px
+      overflow: hidden
+      &:nth-child(4)
+         width: 66.285%
+      &:hover 
+         .van__image 
+            opacity: 1
+         .van__block 
+            background: #EDEDED
+            .svg 
+               path 
+                  fill: $vio
+         .van__text, .van__name 
+            color: white
+      span 
+         display: none
+   &__image 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover 
+      z-index: 0
+      transition: 0.5s 
+      opacity: 0
+   &__block 
+      transition: 0.5s
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 79px
+      height: 79px
+      border-radius: 20px
+      background: $vio
+      margin-bottom: 36px
+      position: relative
+      z-index: 1
+      .svg 
+         path 
+            fill: white
+   &__name 
+      transition: 0.5s
+      color: #222
+      font-family: 'Poppins', sans-serif
+      font-size: 22px
+      font-style: normal
+      font-weight: 700
+      line-height: 21px
+      letter-spacing: 0.44px
+      margin-bottom: 19px
+      position: relative
+      z-index: 1
+   &__text 
+      transition: 0.5s
+      font-size: 18px
+      font-style: normal
+      font-weight: 400
+      line-height: 21px
+      position: relative
+      z-index: 1
+   &__sub 
+      position: relative
+      top: -75px
+      right: 5px
+      margin-bottom: -25px
+      color: #FFF
+      text-align: right
+      font-size: 19px
+      font-weight: 600
+      line-height: 16px
+      text-transform: uppercase
+      width: 100%
+      max-width: 1152px
+   &__link
+      align-items: center
+      width: 100%
+      border-radius: 20px
+      height: 104px
+      position: relative
+      background: $vio
+      justify-content: center
+      margin-top: 40px
+      color: #FFF
+      font-size: 69px
+      font-style: normal
+      font-weight: 800
+      line-height: 70px
+      letter-spacing: 0.69px
+      &::before
+         content: ""
+         display: block
+         width: 413px
+         height: 52px
+         position: absolute
+         top: 50% 
+         margin-top: -26px
+         left: 0
+         background: url(/img/big-left.svg) no-repeat center center
+      &::after
+         content: ""
+         display: block
+         width: 413px
+         height: 52px
+         position: absolute
+         top: 50% 
+         margin-top: -26px
+         right: 0
+         background: url(/img/big-right.svg) no-repeat center center
+      &:hover 
+         color: $vio
+         background: transparent
+.item 
+   padding: 80px 0
+   &__info 
+      width: 100%
+      max-width: 776px
+      font-size: 18px
+      font-style: normal
+      font-weight: 400
+      line-height: 163%
+      opacity: 0.8
+   h2 
+      margin-top: -100px
+   &__sub 
+      color: #000
+      font-size: 22px
+      margin-top: 48px
+      font-style: normal
+      font-weight: 400
+      line-height: 16px
+      text-transform: uppercase
+   &__up 
+      align-items: center
+      width: 100%
+      justify-content: space-between
+      margin-bottom: 51px
+   &__box 
+      justify-content: space-between
+      flex-wrap: wrap
+   &__el
+      width: 48.5%
+      height: 430px
+      position: relative
+      border-radius: 20px
+      overflow: hidden
+      display: flex 
+      flex-direction: column
+      padding: 30px
+      &_3 
+         width: 100%
+      &_4 
+         width: 49.5%
+         height: 100%
+      &:after 
+         content: ""
+         display: block
+         width: 100%
+         height: 100%
+         position: absolute
+         bottom: 0% 
+         left: 0
+         z-index: 1
+         transition: 0.1s
+         background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50.44%, rgba(0, 0, 0, 0.80) 98.66%) no-repeat
+      &:hover:after 
+         opacity: 0.5
+         background: linear-gradient(180deg, rgba(140, 58, 244, 0.65) 50.44%, rgba(140, 58, 244, 0.65) 98.66%) #D9D9D9
+   &__pic 
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      object-fit: cover 
+      z-index: 1
+   &__left 
+      width: 49.3%
+   &__right 
+      width: 49.3%
+      justify-content: space-between
+   &__last
+      .item__el 
+         width: 100%
+         margin-bottom: 20px
+         &:last-child
+            margin-bottom: 0
+   &__name 
+      color: #FFF
+      font-size: 22px
+      font-style: normal
+      font-weight: 700
+      line-height: 21px
+      letter-spacing: 0.44px
+      margin-bottom: 15px
+      margin-top: auto
+      position: relative
+      z-index: 2
+   &__text 
+      color: #FFFAFA
+      font-size: 18px
+      font-style: normal
+      font-weight: 400
+      line-height: 19.84px
+      position: relative
+      z-index: 2
+   &__top 
+      justify-content: space-between
+      margin-bottom: 20px
+   &__bottom 
+      justify-content: space-between
+      margin-top: 20px
+      width: 100%
+      .item__el
+         width: 75.1%
+   &__block 
+      width: 369px
+      height: 430px
+      border-radius: 20px
+      background: $vio
+      text-align: center
+      display: flex
+      align-items: center
+      justify-content: center
+      border: 3px solid #8C3AF4
+      transition: 0.5s 
+      &:hover 
+         background: transparent
+         .item__link 
+            background: $vio
+            color: white 
+            .svg 
+               path 
+                  fill: white
+   &__link 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 259px
+      height: 259px
+      border-radius: 50%
+      background: #FFF
+      text-align: center
+      flex-direction: column
+      color: $vio
+      font-size: 20px
+      font-style: normal
+      font-weight: 700
+      line-height: 23px
+      .svg 
+         display: block
+         margin-bottom: 30px
+.about 
+   padding: 80px 0
+   &__box 
+      justify-content: space-between
+      align-items: center
+   &__content 
+      width: 100%
+      background: #F5F5F5
+      padding: 60px
+      border-radius: 20px
+      flex: 1 0 auto 
+      max-width: 786px
+   &__top 
+      align-items: center
+      margin-bottom: 50px
+      p 
+         margin-left: 34px
+         color: rgba(51, 51, 51, 0.90)
+         font-size: 23px
+         line-height: 29px
+   &__flex 
+      align-items: center
+      img 
+         position: relative
+         margin-left: -75px
+         z-index: 0
+   &__block
+      width: 124px
+      height: 124px
+      border-radius: 50%
+      background: $vio
+      text-align: center
+      color: #FFF
+      text-align: center
+      font-size: 40px
+      font-style: normal
+      font-weight: 900
+      line-height: 23px
+      letter-spacing: 0.8px
+      text-transform: uppercase
+      align-items: center
+      justify-content: center
+      display: flex
+      flex-direction: column
+      z-index: 1
+      span 
+         font-size: 20px
+         letter-spacing: 0.4px
+         display: block
+         margin-top: 7px
+   &__text 
+      color: rgba(51, 51, 51, 0.90)
+      font-size: 23px
+      font-style: normal
+      font-weight: 400
+      line-height: 29px
+   &__list 
+      margin: 30px 0
+      li 
+         align-items: center
+         margin-bottom: 18px
+         color: rgba(51, 51, 51, 0.90)
+         font-size: 23px
+         font-style: normal
+         font-weight: 400
+         line-height: 29px
+         &:last-child
+            margin-bottom: 0
+         &:before 
+            content: ""
+            display: block
+            background: url(/img/check.svg) no-repeat center center
+            width: 20px
+            height: 15px
+            margin-right: 15px
+            position: relative
+            top: -2px
+   &__btn 
+      margin-top: 60px
+      width: 100%
+      height: 104px
+      font-size: 30px
+      padding-right: 23%
+      .svg 
+         position: absolute
+         left: inherit
+         top: 12px
+         right: 150px
+         margin-left: 0px
+         margin-top: 0
+   &__sub 
+      color: #000
+      font-size: 18px
+      margin-top: 48px
+      font-style: normal
+      font-weight: 400
+      line-height: 16px
+      text-transform: uppercase
+      text-align: right
+      width: 100%
+      max-width: 822px
+   h2 
+      margin-top: -99px
+.ser
+   padding: 80px 0
+   .item__sub
+      font-size: 18px
+   .item__up
+      align-items: flex-start
+   h2 
+      margin-top: -144px
+      span 
+         color: $vio
+   &__item 
+      border-radius: 20px
+      background: #F5F5F5
+      width: 15.463%
+      transition: 0.5s
+      height: 540px
+      position: relative
+      overflow: hidden
+      margin-right: 20px
+      padding: 50px
+      display: flex
+      flex-direction: column
+      &:last-child
+         margin-right: 0
+      &:hover 
+         width: 49%
+         background: linear-gradient(116deg, #8C3AF4 8.04%, #5D14BA 70.57%)
+         .ser__name 
+            color: white 
+         .ser__text 
+            opacity: 1
+         .ser__btn 
+            opacity: 1
+   &__pc
+      position: absolute
+      right: 0
+      bottom: 0
+      max-width: 100%
+   &__name 
+      color: #000
+      font-size: 31px
+      font-style: normal
+      font-weight: 600
+      line-height: 33px
+      margin-bottom: 100px
+   &__text 
+      width: 100%
+      max-width: 341px 
+      color: #FFF
+      font-size: 19px
+      font-style: normal
+      font-weight: 400
+      line-height: 21.901px
+      opacity: 0
+      transition: 0.5s
+   &__btn 
+      width: 324px
+      opacity: 0
+      margin-top: auto
+.marquee
+   width: 100%
+   white-space: nowrap
+   display: flex
+   align-items: center
+   padding: 37px 0 
+   border-top: 2px solid #D9D9D9
+   border-bottom: 2px solid #D9D9D9
+   margin-top: 150px
+   p 
+      align-items: center
+      font-size: 25px
+      font-style: normal
+      font-weight: 800
+      line-height: 31px
+      text-transform: uppercase
+      display: flex
+      -webkit-animation: marquee 100s infinite linear
+      animation: marquee 100s infinite linear
+      img 
+         margin: 0 50px
+@-webkit-keyframes marquee 
+   0%
+      -webkit-transform: translate(0, 0)
+   100%
+      -webkit-transform: translate(-100%, 0)
+.rev 
+   padding: 70px 0 100px
+   .swiper-pagination5
+      margin: -154px 0 0 123px
+      color: #D9D9D9
+      font-size: 110px
+      font-style: normal
+      font-weight: 400
+      line-height: 165.5px
+      text-transform: uppercase
+      font-family: 'My Font'
+      .swiper-pagination-current
+         color: $vio
+         margin-right: -15px
+      .swiper-pagination-total
+         margin-left: -15px
+   .item__sub
+      text-align: right
+      position: relative
+      right: 5px
+   h2 
+      margin-top: -109px
+   .swiper5 
+      height: 504px
+      .swiper-slide
+         position: relative
+         height: 100%
+         overflow: hidden
+         border-radius: 20px
+         display: flex
+         flex-direction: column
+         padding: 30px
+         &:after 
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            transition: 0.5s
+            z-index: 0
+            background: linear-gradient(0deg, rgba(140, 58, 244, 0.80) 0%, rgba(140, 58, 244, 0.80) 100%) 
+         &:hover:after 
+            opacity: 0
+   &__video 
+      position: absolute
+      width: max-content
+      top: 50%
+      left: 50%
+      margin-top: -55px
+      margin-left: -58px
+      z-index: 2
+      cursor: pointer
+   &__bg 
+      position: absolute
+      left: 0
+      top: 0
+      width: 100% 
+      height: 100%
+      object-fit: cover 
+      z-index: 0
+   &__name 
+      position: relative
+      z-index: 1
+      margin-bottom: 15px
+      color: #FFF
+      font-size: 22px
+      font-style: normal
+      font-weight: 700
+      line-height: 21px
+      letter-spacing: 0.44px
+      margin-top: auto
+   &__text 
+      position: relative
+      z-index: 1
+      color: #FFFAFA
+      font-size: 18px
+      font-style: normal
+      font-weight: 400
+      line-height: 19.84px
+   &__arrows 
+      align-items: center
+      margin-left: auto
+      max-width: 180px
+      width: 100%
+      justify-content: space-between
+   &__top 
+      align-items: center
+      margin-bottom: 48px
+   &-arr 
+      width: 80px
+      height: 80px
+      position: relative
+      cursor: pointer
+      img 
+         position: absolute
+         left: 0
+         top: 0
+         transition: 0.5s
+      .new 
+         opacity: 0
+         transform: rotate(180deg)
+      &:hover 
+         .new 
+            opacity: 1
+         .old
+            opacity: 0
+   .swiper-button-next5
+      transform: rotate(180deg)
+.swiper-button-disabled
+   opacity: 0 !important
+.accordeon 
+   width: 100%
+.accordeon__item 
+   width: 100%
+   list-style-type: none
+   &:first-child
+      .accordeon__button
+         border-top: 2px solid #D9D9D9
+.accordeon__item:first-child .accordeon__button 
+   margin-top: 0
+.accordeon__button 
+   width: 100%
+   text-align: left
+   border: none
+   cursor: pointer
+   position: relative
+   transition: all 0.5s ease
+   display: flex
+   align-items: center
+   color: #333
+   font-size: 25px
+   font-style: normal
+   font-weight: 700
+   line-height: 26px
+   text-transform: uppercase
+   padding: 32px 0 34px 
+   border-bottom: 2px solid #D9D9D9
+   span 
+      color: #999
+      font-family: 'HelveticaNeueCyr'
+      font-size: 25px
+      font-style: normal
+      font-weight: 700
+      line-height: 22px
+      margin-right: 42px
+      transition: 0.5s
+.accordeon__button.active
+   border-bottom: none
+   color: $vio
+   span 
+      color: $vio
+.accordeon__button:hover 
+   color: $vio
+.accordeon__button:after 
+   content: ""
+   position: absolute
+   right: 50px
+   background: url(/img/ar1.svg) no-repeat
+   width: 48px
+   left: inherit
+   height: 35px
+   bottom: 47%
+   margin-bottom: -20px
+   transition: all 0.5s ease
+.accordeon__button.active:after 
+   content: ""
+   position: absolute
+   right: 31px
+   background: url(/img/ar2.svg) no-repeat
+   width: 48px
+   left: inherit
+   height: 50px
+   bottom: 30%
+   margin-bottom: -20px
+   transition: all 0.5s ease
+.accordeon__panel 
+   max-height: 0
+   overflow: hidden
+   margin-left: 0
+   transition: all 0.5s ease
+.panel__text 
+   list-style-type: none
+   padding-top: 0px
+   max-width: 100%
+   margin-top: 20px
+   align-items: center
+   justify-content: space-between
+   padding-bottom: 40px
+   border-bottom: 2px solid #D9D9D9
+   p
+      color: rgba(51, 51, 51, 0.90)
+      font-size: 23px
+      font-style: normal
+      font-weight: 400
+      line-height: 29px
+      margin-bottom: 15px
+      &:last-child
+         margin-bottom: 0
+   img 
+      object-fit: cover 
+      width: 733px
+      height: 252px
+      margin-right: 40px
+.faq 
+   padding: 100px 0 170px
+   &__top 
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 64px
+   .item__sub
+      text-align: right
+      position: relative
+      top: 13px
+      right: 5px
+   h2 
+      margin-top: -108px
+      position: relative
+      top: 20px
+.contacts
+   background: #F5F5F5
+   padding: 170px 0
+   &__phone 
+      margin-top: 76px
+      color: #333
+      font-size: 89px
+      font-style: normal
+      font-weight: 800
+      font-family: 'Poppins', sans-serif
+      line-height: 30px
+      display: block
+   &__socials 
+      justify-content: space-between
+      a 
+         width: 31.5%
+         display: flex
+         align-items: center
+         justify-content: center
+         height: 114px
+         border-radius: 20px
+         background: #8C3AF4
+         border: 2px solid $vio
+         &:hover 
+            background: transparent
+            .svg 
+               path 
+                  fill: $vio
+               .tr 
+                  fill: white
+   h2 
+      margin-top: -107px
+      font-size: 100px
+   &__box 
+      justify-content: space-between
+      align-items: flex-start
+   &__left 
+      width: 100%
+      max-width: 734px 
+      img 
+         width: 100%
+         border-radius: 20px
+         object-fit: cover 
+         margin-bottom: 24px
+   &__right 
+      width: 100%
+      margin-left: 42px
+   &__block 
+      width: 100%
+      height: 114px
+      border-radius: 20px
+      border: 1px solid #D9D9D9
+      background: #333
+      padding: 30px
+      margin-bottom: 20px
+   &__sub 
+      margin-bottom: 15px
+      color: #FFF
+      font-size: 20px
+      font-style: normal
+      font-weight: 700
+      font-family: 'Arial'
+   &__text 
+      color: #FFF
+      font-family: 'Arial'
+      font-size: 30px
+      font-style: normal
+      font-weight: 700
+      text-transform: uppercase
+   &__info 
+      color: #8D8E8E
+      font-size: 21px
+      font-style: normal
+      font-weight: 400
+      line-height: 120%
+      margin-top: 40px
+      a 
+         color: #8C3AF4
+         text-decoration-line: underline
+         &:hover 
+            color: black
+   &__form 
+      width: 100%
+      margin-top: 44px
+      input::-webkit-input-placeholder 
+         color: #979898 !important
+      input::-moz-placeholder
+         color: #979898 !important
+      input:-ms-input-placeholder 
+         color: #979898 !important
+      input:-moz-placeholder 
+         color: #979898 !important
+   &__input 
+      width: 100%
+      margin-bottom: 24px
+      height: 114px
+      border-radius: 20px
+      border: 1px solid #D9D9D9
+      background: #FFF
+      padding-left: 44px
+      font-size: 18px
+      font-family: 'Poppins', sans-serif
+      color: #1E1E1E
+   &__btn 
+      width: 100%
+      height: 114px
+      font-size: 30px
+      font-style: normal
+      font-weight: 800
+      &:hover 
+         color: $vio
+#map 
+   width: 100%
+   overflow: hidden 
+   border-radius: 20px
+   height: 527px
+   margin-top: 50px
+[class*="ymaps-"][class*="-ground-pane"] 
+   filter: grayscale(100) !important
+.footer 
+   background: #333
+   padding: 50px 0 66px
+   &__box 
+      justify-content: space-between
+      margin-bottom: 120px
+      width: 100%
+      max-width: 94%
+   &__uls 
+      width: 100%
+      max-width: 331px 
+      justify-content: space-between
+      li 
+         margin-bottom: 15px
+         &:last-child
+            margin-bottom: 0
+         a 
+            font-family: 'Poppins', sans-serif
+            color: #FFF
+            font-size: 15px
+            font-style: normal
+            font-weight: 400
+            line-height: 30px
+            letter-spacing: 0.52px
+            text-transform: uppercase
+         &:hover 
+            a
+               color: $vio
+   &__block 
+      margin-bottom: 40px
+      &:last-child
+         margin-bottom: 0
+   &__socials 
+      margin-left: 148px
+      p 
+         margin-bottom: 12px
+         color: #FFF
+         font-family: 'Arial'
+         font-size: 20px
+         font-style: normal
+         font-weight: 700
+   &__link 
+      width: 36px
+      height: 36px
+      border: 2px solid white
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      margin-right: 18px
+      &:last-child
+         margin-right: 0
+      &:nth-child(2), &:nth-child(3)
+         padding-left: 1px
+      &:hover
+         background: $vio
+         border: 2px solid $vio
+   &__bottom 
+      justify-content: space-between
+      align-items: flex-end
+   &__comercial 
+      color: #FFF
+      font-size: 19px
+      font-style: normal
+      font-weight: 300
+      line-height: 21.7px
+      position: relative
+      top: -10px
+      left: -20px
+      a 
+         color: white
+         &:hover 
+            color: $vio
+   &__com 
+      &:hover 
+         opacity: 0.7
+   h2 
+      font-size: 72px
+      color: white
+      transition: 0.5s
+      margin-top: -65px
+   &__call 
+      align-items: center
+      .svg 
+         margin-left: 74px
+         margin-top: 17px
+      &:hover 
+         h2 
+            color: $vio
+         .svg 
+            path 
+               stroke: $vio
+.bb 
+   display: none
+.page 
+   .header
+      padding-bottom: 0
+   h1 
+      color: #222
+      font-size: 110px
+      font-style: normal
+      font-weight: 400
+      line-height: 170px
+      text-transform: uppercase
+      margin-top: -73px
+   .item__box_1
+      margin-top: 100px
+      margin-bottom: 20px
+   .item__el_new 
+      width: 23.5% !important
+   #map 
+      margin: 100px 0 170px
+   .contacts
+      background: white
+      padding: 100px 0
+   .contacts__left 
+      order: 2
+   .contacts__right
+      order: 1
+      margin-left: 0
+      margin-right: 42px
+   .contacts__form
+      margin-top: 0
+   .contacts h2
+      margin-bottom: 100px
+   .contacts-project
+      background: #F5F5F5
+.proj__btn
+   width: 100%
+   margin-top: 40px
+.error 
+   padding-top: 50px
+   &__box 
+      align-items: center
+      justify-content: space-between
+   &__sub 
+      color: #222
+      font-size: 33px
+      font-style: normal
+      font-weight: 900
+      line-height: 43px
+      letter-spacing: 1px
+      text-transform: uppercase
+      margin-top: 47px
+   .about__btn
+      max-width: 667px 
+      background: transparent
+      color: $vio
+      &:hover 
+         background: $vio 
+         color: white
+.policy 
+   padding-bottom: 150px
+   h1 
+      font-size: 100px
+      line-height: 100%
+      margin-bottom: 120px
+      margin-top: -22px
+      .a 
+         position: relative
+         left: 39px
+   .bread
+      margin-top: 0
+   &__name 
+      color: #001A34
+      font-size: 30px
+      font-style: normal
+      font-weight: 800
+      line-height: 38px
+      margin-bottom: 35px
+   &__text 
+      color: #787878
+      font-size: 17px
+      font-style: normal
+      font-weight: 400
+      line-height: 20px
+      margin-bottom: 25px
+.art 
+   &__box 
+      justify-content: space-between
+      flex-wrap: wrap
+      margin-top: 100px
+   &__item 
+      width: 32.4%
+      margin-bottom: 20px
+      border-radius: 20px
+      border: 2px solid #EAEAEA
+      padding: 40px
+      display: flex
+      flex-direction: column
+      height: auto
+      transition: 0.5s 
+      &:hover 
+         border: 2px solid #8C3AF4
+   &__pic 
+      width: 100% 
+      object-fit: cover
+      margin-bottom: 30px
+   &__name 
+      font-size: 22px
+      font-style: normal
+      font-weight: 700
+      line-height: 25px
+      letter-spacing: 0.44px
+      margin-bottom: 20px
+   &__text 
+      color: rgba(51, 51, 51, 0.90)
+      font-size: 18px
+      font-style: normal
+      font-weight: 400
+      margin-bottom: 30px
+      line-height: 19.84px
+   &__btn 
+      width: 100%
+      margin-top: auto
+#art-item 
+   h1 
+      line-height: 100%
+      margin-top: -30px
+      margin-bottom: 180px
+      .r 
+         position: relative
+         left: 9px
+.art-item 
+   &__box 
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 100px
+      &_2 
+         .art-item__content
+            order: 2 
+            margin-right: 0
+            margin-left: 40px
+         .art-item__wrap 
+            order: 1
+            img 
+               &:nth-child(2), &:nth-child(3)
+                  width: 48.5%
+               &:nth-child(1)
+                  width: 100%
+   &__wrap 
+      flex-wrap: wrap 
+      justify-content: space-between
+      width: 100%
+      max-width: 776px
+      img 
+         border-radius: 20px
+         margin-bottom: 20px
+         height: 317px
+         object-fit: cover
+         &:last-child
+            margin-bottom: 0
+         &:nth-child(1), &:nth-child(2)
+            width: 48.5%
+         &:nth-child(3)
+            width: 100%
+   &__content 
+      width: 100%
+      max-width: 755px
+      margin-right: 40px
+   &__name 
+      font-size: 30px
+      font-style: normal
+      font-weight: 800
+      line-height: 20px
+      margin-bottom: 30px
+   &__text 
+      color: rgba(51, 51, 51, 0.90)
+      font-size: 20px
+      font-style: normal
+      font-weight: 400
+      line-height: 20px
+      margin-bottom: 35px
+   &__list 
+      margin-bottom: 35px
+      list-style-type: decimal
+      padding-left: 20px
+      li 
+         color: rgba(51, 51, 51, 0.90)
+         font-size: 20px
+         font-style: normal
+         font-weight: 400
+         line-height: 20px
+.project-item
+   .art-item__wrap img
+      height: 430px
+   h1 
+      .n 
+         position: relative
+         left: 40px
+   &__view 
+      position: relative
+      width: 100%
+      height: 880px
+      border-radius: 20px
+      overflow: hidden
+      &:after 
+         content: ""
+         display: block
+         z-index: 0
+         position: absolute
+         width: 100%
+         height: 100%
+         left: 0
+         top: 0
+         background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%), lightgray -5px -1218.984px / 100.654% 269.782% no-repeat
+         opacity: 0.5
+   &__flex 
+      justify-content: space-between
+      margin-top: 20px
+      .art-item__wrap
+         &:first-child
+            img:nth-child(1)
+               width: 100%
+            img:nth-child(2), img:nth-child(3)
+               width: 48.5%
+   .art-item__content
+      border-radius: 20px
+      background: #F5F5F5
+      padding: 90px 60px
+      max-width: 779px
+      margin-right: 24px
+      h2 
+         font-size: 72px
+         margin-bottom: 30px
+      .art-item__text
+         line-height: 29px
+   .about__btn
+      font-weight: 800
+   .about__btn .svg
+      right: 130px
+   .art-item__box
+      align-items: inherit
+   &__el 
+      align-items: center
+      margin-bottom: 39px
+      margin-right: 49px
+      p 
+         margin-left: 13px
+         color: rgba(51, 51, 51, 0.90)
+         font-size: 19px
+         font-style: normal
+         font-weight: 600
+         line-height: 140%
+   &__row
+      flex-wrap: wrap
+      width: 100%
+      max-width: 400px
+.idea
+   padding: 20px 0 100px
+   &__box 
+      align-items: flex-start
+      justify-content: space-between
+   &__content 
+      width: 100%
+      max-width: 730px
+      position: relative
+      p 
+         margin-bottom: 30px
+         color: rgba(51, 51, 51, 0.90)
+         font-size: 21px
+         font-style: normal
+         font-weight: 400
+         line-height: 31px
+         &:last-child
+            margin-bottom: 0
+      &:before 
+         content: ""
+         display: block
+         height: 100%
+         width: 8px
+         border-radius: 87px
+         background: #8C3AF4
+         position: absolute
+         left: -40px
+         top: 0
+      &:after 
+         content: ""
+         display: block
+         position: absolute
+         right: 0
+         bottom: -72px
+         background: url(/img/ot.svg) no-repeat
+         width: 111px
+         height: 63px
+   &__wrap
+      width: 100%
+      position: relative
+      max-width: 776px
+      img 
+         width: 100%
+         border-radius: 20px
+         object-fit: cover
+   &__block 
+      position: absolute
+      left: 0
+      bottom: 0
+      border-radius: 0px 20px 0px 0px
+      background: #FFF
+      width: 398px
+      padding: 32px 25px
+   &__name 
+      margin-bottom: 20px
+      color: #8C3AF4
+      font-size: 28px
+      font-style: normal
+      font-weight: 700
+      line-height: 16px
+      text-transform: uppercase
+   &__info 
+      color: #000
+      font-size: 20px
+      font-style: normal
+      font-weight: 400
+      line-height: 16px
+      text-transform: uppercase
+   h2 
+      margin: -48px 0 101px
+      .me 
+         position: relative
+         left: 10px
+/*POPUP*/
+.box-modal__close 
+   z-index: 10
+   cursor: pointer
+   position: absolute
+   top: 5%
+   right: 5%
+   cursor: pointer
+   z-index: 20
+   transition: 0.5s
+   width: 113px
+   height: 113px
+   display: flex
+   align-items: center
+   justify-content: center
+   border-radius: 50%
+   background: $vio
+   display: flex
+   align-items: center
+   justify-content: center
+   border: 2px solid $vio
+   &:hover 
+      background: transparent
+      transform: rotate(90deg)
+      .svg
+         transition: 0.5s
+         path
+            transition: 0.5s
+            stroke: $vio
+            opacity: 1
+.box-modal 
+   position: relative
+.popup-call__box 
+   position: absolute
+   top: 20%
+   margin-top: -470px
+   width: 100%
+   left: 0%
+   margin-left: 0px
+   height: auto 
+   padding: 100px 174px
+   background: #F5F5F5
+   overflow: hidden
+   h2 
+      margin: -90px 0 68px
+   .contacts__form
+      margin-top: 0
+.thank__title 
+   text-align: center
+   margin-bottom: 25px
+   color: #222
+   font-size: 40px
+   font-style: normal;
+   font-weight: 900
+   line-height: 43px
+   text-transform: uppercase
+.arcticmodal-container_i2, .arcticmodal-container_i
+   width: 100%
+   padding: 0 !important
+.popup
+   &__wrap 
+      justify-content: center
+      align-items: flex-start
+      margin-top: 60px
+   &__content 
+      margin-right: 20px
+   &__pic 
+      object-fit: cover
+input.error 
+   border: 1px solid red
+   padding-top: 0 !important
+label.error 
+   display: none !important
+#popup-thank 
+   .box-modal__close 
+      position: relative
+      margin: 0 auto
+      top: 0
+      right: 0
+   .popup-call__box 
+      margin-top: -250px
+.item-el 
+   .item__last
+      width: 48%
+.i 
+   position: relative
+   left: 10px
+.el 
+   &__box 
+      margin-top: -128px
+      position: relative
+   &__map 
+      position: absolute
+      top: -241px
+      right: -174px
+      z-index: -1
+   &__link 
+      position: absolute
+      bottom: -127px
+      left: 46%
+      background: $vio
+      color: white
+      border: 2px solid $vio
+      .svg
+         path 
+            fill: white
+      &:hover 
+         opacity: 0.8
+         color: white
+         .svg 
+            path 
+               fill: white
+   &__content 
+      border-radius: 0 20px 20px 0
+      border: 10px solid #8C3AF4
+      background: rgba(255, 255, 255, 0.95)
+      box-shadow: 0px 4px 45px 0px rgba(0, 0, 0, 0.1)
+      border-left: none
+      width: 1086px
+      padding: 45px 126px 53px 233px
+      position: relative
+      left: -230px
+   &__name 
+      font-size: 25px
+      font-style: normal
+      font-weight: 800
+      line-height: 163%
+      text-transform: uppercase
+      margin-bottom: 15px
+   &__text 
+      opacity: 0.8
+      font-size: 21px
+      font-style: normal
+      font-weight: 400
+      line-height: 145%
+      letter-spacing: 0.18px
+      margin-bottom: 18px
+      width: 100%
+      max-width: 728px
+      span 
+         color: #000
+         font-weight: 600
+      &:last-child
+         margin-bottom: 0
+   &__icon 
+      margin-left: 20px
+.kind
+   h2 
+      margin: 57px 0 115px
+   .accordeon
+      position: relative
+   .accordeon__item
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+   .accordeon__button
+      max-width: 776px
+   .panel__text
+      max-width: 728px 
+      position: absolute
+      right: 0
+      top: 0
+      margin-top: 0
+      padding-bottom: 0
+      border-bottom: none
+      .el__text 
+         opacity: 0.8
+         font-size: 21px
+         font-style: normal
+         font-weight: 400
+         line-height: 145%
+         letter-spacing: 0.18px
+         margin-bottom: 18px
+         width: 100%
+         max-width: 728px
+         color: #000
+         span 
+            color: #000
+            font-weight: 600
+         &:last-child
+            margin-bottom: 0
+   .accordeon__button:after
+      opacity: 0
+      display: none
+      right: 0
+      bottom: 55%
+      transform: rotate(-90deg)
+   .accordeon__button.active:after
+      opacity: 1
+      display: block
+   .accordeon__button.active 
+      border-bottom: 2px solid #D9D9D9
+   .accordeon__panel
+      opacity: 0 
+   .accordeon__button.active + .accordeon__panel
+      opacity: 1
+   &__list 
+      li 
+         display: flex
+         align-items: center
+         color: rgba(51, 51, 51, 0.90)
+         font-size: 21px
+         font-style: normal
+         font-weight: 400
+         line-height: 29px
+         margin-bottom: 20px
+         &:last-child
+            margin-bottom: 0
+         &::before
+             display: inline-flex
+             content: ""
+             align-items: center
+             margin-right: 20px
+             background: $vio
+             width: 13px
+             height: 13px
+             max-width: 13px
+             border-radius: 50%
+             flex: 1 0 auto 
+             max-width: 13px
+.level 
+   .aa 
+      position: relative
+      left: 21px
+   .ab 
+      position: relative
+      left: 40px
+   h2 
+      margin: 66px 0 118px
+   &__box 
+      justify-content: space-between
+      flex-wrap: wrap 
+   &__item 
+      text-align: center
+      width: 32.5%
+      border-radius: 20px
+      border: 2px solid #F5F5F5
+      background: #F5F5F5
+      transition: 0.5s
+      padding: 40px 35px
+   &__block 
+      display: flex
+      align-items: center
+      justify-content: center
+      background: $vio
+      border-radius: 50% 
+      width: 99px
+      height: 99px
+      transition: 0.5s 
+      margin: 0 auto 30px
+   &__name 
+      font-size: 30px
+      font-style: normal
+      font-weight: 700
+      line-height: 20px
+      margin-bottom: 20px
+      transition: 0.5s
+   &__text 
+      opacity: 0.8
+      font-size: 20px
+      font-style: normal
+      font-weight: 400
+      line-height: 145%
+      letter-spacing: 0.18px
+      color: #000
+      transition: 0.5s
+.item-el
+   h2 
+      margin-top: -28px
+      margin-bottom: 119px
+.marquee-el
+   margin-top: 100px
+.step 
+   padding-bottom: 160px
+   .level__item
+      border: 2px solid #F5F5F5
+      background: transparent
+      position: relative
+      overflow: hidden
+      margin-bottom: 20px
+      .svg 
+         path 
+            fill: white
+      &:hover 
+         background: $vio
+         .step__num 
+            color: #752BD2
+         .level__name, .level__text 
+            color: white
+         .level__block
+            background: white
+            .svg 
+               path 
+                  fill: $vio
+   &__num 
+      position: absolute
+      left: 0px
+      top: -5px
+      color: #EDEDED
+      font-size: 160px
+      display: block
+      line-height: 100%
+      font-weight: 900
+      transform: rotate(90deg)
+      transition: 0.5s
+   .van__link
+      margin-top: 20px
+.art-item__box-ser
+   margin-top: 160px
+.page
+   .contacts-ser
+      h2 
+         margin-bottom: 0
+      .contacts__form
+         margin-top: 44px
+.ab3 
+   position: relative
+   left: 10px

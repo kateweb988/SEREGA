@@ -1,0 +1,201 @@
+body
+   font-family: 'Proxima Nova', sans-serif
+   background: #FFFFFF
+   font-weight: 400
+   font-size: 16px
+   line-height: 120%
+   color: #222
+a
+   text-decoration: none
+   box-sizing: border-box
+   transition: 0.5s !important
+   &:hover 
+      color: $vio
+.container
+   padding: 0 15px
+   max-width: 1608px
+   margin: 0 auto
+   @media ( max-width: 1199px )
+      max-width: 960px
+   @media (max-width: 991px)
+      max-width: 720px
+   @media (max-width: 767px)
+      max-width: 540px
+.d-flex, .q
+   display: flex
+.body-wrap
+   overflow: hidden
+   position: relative
+   display: flex
+   flex-direction: column
+   min-height: 100vh
+footer
+   margin-top: auto
+h1
+   margin: 0
+   font-size: 140px
+   font-style: normal
+   font-weight: 400
+   line-height: 100%
+   letter-spacing: 1px
+   text-transform: uppercase
+   font-family: 'My Font'
+   z-index: -1
+h2 
+   margin: 0
+   font-family: 'My Font'
+   font-size: 110px
+   font-style: normal
+   font-weight: 400
+   line-height: 170px
+   text-transform: uppercase
+ul 
+   margin: 0
+   padding: 0
+   list-style-type: none
+p
+   margin: 0
+.svg 
+   transition: 0.5s ease
+a
+   transition: color 0.5s ease
+   box-sizing: border-box
+li
+   a
+      transition: color 0.5s ease
+button
+   cursor: pointer
+   box-sizing: border-box
+textarea
+   transition: border 0.5s
+   box-sizing: border-box
+   &:focus
+      transition: border 0.5s
+      outline: none
+      border: 1px solid $vio !important
+input
+   transition: 0.5s
+   box-sizing: border-box
+   border: 1px solid #fff
+   color: white
+   &:disabled
+      pointer-events: none
+      opacity: 0.5
+   &:focus 
+      border: 1px solid $vio !important
+      transition: 0.5s
+   &:focus-visible
+      outline: initial
+path, circle
+   transition: fill 0.5s, stroke 0.5s
+div 
+   box-sizing: border-box
+.icon 
+   transition: fill 0.5s, stroke 0.5s
+html * 
+   scrollbar-width: thin
+   scrollbar-color: blue $vio
+*::-webkit-scrollbar,
+html *::-webkit-scrollbar 
+   height: 4px
+   width: 4px
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track 
+   background: #E7E7E7
+   border-radius: 3px
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb 
+   background-color: $vio
+   border-radius: 6px
+
+.photo__scroll 
+   scrollbar-width: thin
+   scrollbar-color: blue $vio
+.photo__scroll::-webkit-scrollbar 
+   height: 0px
+   width: 0px
+.photo__scroll::-webkit-scrollbar-track 
+   background: #E7E7E7
+   border-radius: 3px
+.photo__scroll::-webkit-scrollbar-thumb 
+   background-color: $vio
+   border-radius: 6px
+.btn 
+   display: flex
+   align-items: center
+   justify-content: center
+   width: 338px
+   height: 105px
+   border-radius: 76px
+   background: $vio
+   position: relative
+   border: 3px solid $vio
+   .svg 
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-left: -51px
+      margin-top: -36.5px
+   .new
+      opacity: 0
+   &:hover 
+      background: transparent
+      .old
+         opacity: 0
+      .new 
+         opacity: 1
+   &:active 
+      background: #6414CA
+      border: 3px solid #6414CA
+      .old
+         opacity: 1
+      .new 
+         opacity: 0
+   &_2 
+      width: 686px
+      height: 104px
+      border-radius: 20px
+      color: #FFF
+      font-size: 40px
+      font-style: normal
+      font-weight: 900
+      line-height: 70px
+      letter-spacing: 0.4px
+      text-transform: uppercase
+      &:active
+         color: white
+   &_3 
+      width: 431px
+      height: 76px
+      border-radius: 48px
+      border: 2px solid $vio
+      background: #FFF
+      color: $vio
+      text-align: center
+      font-size: 20px
+      font-style: normal
+      font-weight: 700
+      line-height: 23px
+      .svg 
+         position: relative
+         top: 0
+         left: 0
+         margin-left: 15px
+         margin-top: 0
+      &:hover 
+         background: $vio
+         color: white
+         .svg 
+            path 
+               fill: white
+      &:active 
+         border: 2px solid #6414CA
+         background: #FFF
+         color: #6414CA
+         .svg 
+            path 
+               fill: #6414CA
+.mob 
+   display: none
+.vio 
+   color: $vio
